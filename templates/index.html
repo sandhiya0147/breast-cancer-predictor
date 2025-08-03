@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Breast Cancer Prediction (SVM)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <h2>Breast Cancer Prediction (SVM)</h2>
+
+  <form method="POST">
+    {% for col in feature_columns %}
+      <input type="text" name="{{ col }}" placeholder="{{ col }}" required><br>
+    {% endfor %}
+    <input type="submit" value="Predict">
+  </form>
+
+  {% if result %}
+    <h3>Prediction: {{ result }}</h3>
+  {% endif %}
+
+</body>
+</html>

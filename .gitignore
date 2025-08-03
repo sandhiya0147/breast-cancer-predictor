@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Model files
+*.pkl
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+
+# Virtual environment (if used)
+venv/
+
+# Logs or debug
+*.log
+
+# Render or deployment
+*.db
